@@ -1,0 +1,26 @@
+System is being built only off of the system driver
+Maximum wallclock time: 12:00:00
+
+Wed Aug  3 10:12:56 2022
+Iteration 1 (5000 requested)
+0 segments remain in iteration 1 (5 total)
+1 of 5 (20.000000%) active bins are populated
+per-bin minimum non-zero probability:       1
+per-bin maximum probability:                1
+per-bin probability dynamic range (kT):     0
+per-segment minimum non-zero probability:   0.2
+per-segment maximum non-zero probability:   0.2
+per-segment probability dynamic range (kT): 0
+norm = 1, error in norm = 0 (0*epsilon)
+exception caught; shutting down
+-- ERROR    [w_run] -- Traceback (most recent call last):
+  File "/opt/anaconda3/envs/westpa-2020.05/westpa-2020.05/lib/cmds/w_run.py", line 49, in <module>
+    sim_manager.run()
+  File "/opt/anaconda3/envs/westpa-2020.05/westpa-2020.05/src/west/sim_manager.py", line 636, in run
+    self.run_we()
+  File "/opt/anaconda3/envs/westpa-2020.05/westpa-2020.05/src/west/sim_manager.py", line 552, in run_we
+    pickled, hashed = self.we_driver.bin_mapper.pickle_and_hash()
+  File "/opt/anaconda3/envs/westpa-2020.05/westpa-2020.05/lib/west_tools/westpa/binning/assign.py", line 86, in pickle_and_hash
+    pkldat = pickle.dumps(self, pickle.HIGHEST_PROTOCOL)
+AttributeError: Can't pickle local object 'ODLDSystem.initialize.<locals>.func'
+
